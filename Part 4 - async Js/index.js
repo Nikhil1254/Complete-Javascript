@@ -384,9 +384,11 @@
 /**
  * 1. let and const are blocked scope, seperatly store hotat
  * 2. var global scope madhe store hoto in window. 
+ * 3. shadowing basically kay ahe baherchya scope madhe jya name ne variable exist kartoy tyach name cha variable inner scope madhe create karto apan.
+ * 4. global scope madhe je let const ne create karto te pn alag memory space madhe store hotat , debug everythinh in mozilla
  */
 
-// example 1 ---
+// example 1 --------------------------
 // var x = 10;
 // let y = 20 ;
 // const z = 30  ;
@@ -396,7 +398,7 @@
 // console.log(z);
 
 
-// example 2 ---
+// example 2 ----------------------
 // var x = 100
 // {
 //     var x = 10;
@@ -411,7 +413,7 @@
 // console.log(x);
 
 
-// example 3 ------
+// example 3 --------------------------
 // {
 //     var x = 10;
 //     let y = 20;
@@ -426,13 +428,39 @@
 // console.log(y);
 // console.log(z);
 
-// example 4 ---
-let x = 100 ;
-{
-    let x = 200;
-    const y = 300 ;
-    console.log(x);
-    console.log(y);
-}
+// example 4 --------------------------
+// let x = 100 ;
+// {
+//     let x = 200;
+//     const y = 300 ;
+//     console.log(x);
+//     console.log(y);
+// }
 
-console.log(x);
+// console.log(x);
+
+
+// example 5 ----------------------
+// const a = 10;
+// {
+//     const a = 20;
+//     {
+//         const a = 30;
+//         console.log(a);
+//     }
+
+//     console.log(a);
+// }
+
+// console.log(a);
+
+//##################################################################################################################
+//callbacks
+/**
+ * 1. a function passed to another function as an argument is called callback function
+ * 2. it provides us access to or to achieve async behaviour in js
+ * 3. js is a single threaded synchronous programming language
+ */
+
+// example 1----
+//
